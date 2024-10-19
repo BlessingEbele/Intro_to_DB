@@ -3,7 +3,7 @@
 -- date: 14/10/2024
 
 
--- Create the database
+-- Create the database. this create a database
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
