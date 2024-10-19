@@ -23,8 +23,14 @@ def create_database():
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database 'alx_book_store' created successfully!")
 
+    except mysql.connector.Error as e:
+        #handles mysql specific errors
+        print(f"MyDQL Error: {e}")
+
     except Error as e:
-        print(f"Error: '{e}' occurred while connecting to the MySQL server.")
+        #handles other general error
+        print(f"Error: {e}")
+
 
     finally:
         # Close the connection and cursor to avoid memory leaks
